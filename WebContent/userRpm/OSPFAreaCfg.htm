@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>OSPF AREA配置</title>
+    <LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+    <SCRIPT language="javascript" src="../dynaform/common.js"
+      type="text/javascript"></SCRIPT>
+    <script type="text/javascript">
+      window.onload = function() {
+        tabs.set("tab_menu", "tab_content");
+      }
+    </script>
+  </head>
+  <body>
+
+    <CENTER>
+      <FORM action="StatusRpm.htm" enctype="multipart/form-data"
+        method="get">
+        <TABLE width="702" border="0" cellpadding="0" cellspacing="0"
+          class="space">
+          <TR>
+            <TD width="7" class="title"><IMG src="../images/arc.gif"
+              width="7" height="24"></TD>
+            <TD width="695" align="left" valign="middle" class="title">OSPF AREA配置</TD>
+          </TR>
+          <TR>
+            <TD colspan="2">
+              <div id="tab_menu">
+                <!--tag标题-->
+                <ul id="nav">
+                  <li><a href="#" class="selected">创建区域</a></li>
+                  <li><a href="#" >区域总结</a></li>
+                  <div style="clear: both"></div>
+                </ul>
+                <!--二级菜单-->
+                <div id="tab_content">
+                  <div class="tag" style="display: block">
+
+                    <TABLE width="702" border="0" cellspacing="0"
+                      cellpadding="0">
+                      <TR>
+                        <TD width="700" >
+                          <TABLE width="600" border="0" align="center" class="space">
+                            <TR>
+                              <TH colspan="2">新建OSPF区域</TH>
+                            </TR>
+                            <TR>
+                              <TD width="100">区域ID</TD>
+                              <TD><input type="text" name="areaid"></TD>
+                              <TD> </TD><TD> </TD>
+                            </TR>
+                            <TR>
+                              <TD>存根区域</TD>
+                              <TD><input type="checkbox" name="stubarea" value="0"></TD>
+                            </TR>
+                            <TR>
+                              <TD>存根区域允许总结</TD>
+                              <TD><input type="checkbox" name="stub" value="0"></TD>
+                            </TR>
+                            <tr>
+                              <td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+                                id="Submit" value="创建" onClick="return doSubmit();">
+                              </td>
+                            </tr>
+                          </TABLE>
+                        </TD>
+                      </TR>
+                    </TABLE>
+                    <hr/>
+                    <TABLE width="702" border="0" cellspacing="0"
+                      cellpadding="0">
+                      <TR>
+                        <TD width="700" >
+                          <TABLE width="600" border="0" align="center" class="space">
+                            <TR>
+                              <TH colspan="2">已创建OSPF区域列表</TH>
+                            </TR>
+                            <TR>
+                              <TH width="100">区域ID</TH><TH>存根区域</TH><TH>允许总结LSA泛洪进区域</TH><TH>删除区域</TH>
+                            </TR>
+                          </TABLE>
+                        </TD>
+                      </TR>
+                    </TABLE>
+                  </div>
+                  <div class="tag" style="display: none">
+                    <TABLE width="702" border="0" cellspacing="0"
+                      cellpadding="0">
+                      <TR>
+                        <TD width="700" >
+                          <TABLE width="600" border="0" align="center" class="space">
+                            <TR>
+                              <TH colspan="2">OSPF区域地址总结</TH>
+                            </TR>
+                            <TR>
+                              <TD width="100">区域ID</TD>
+                              <TD><input type="text" name="areaid"></TD>
+                            </TR>
+                            <TR>
+                              <TD>区域地址范围</TD>
+                              <TD><input type="text" name="startip"></TD>
+                              <TD><input type="text" name="endip"></TD>
+                            </TR>
+                            <TR>
+                              <TD>是否通告</TD>
+                              <TD><input type="checkbox" name="notify" value="0"></TD>
+                            </TR>
+                            <tr>
+                              <td><input class="button" value="添加"></td>
+                              <td><input class="button" value="删除"></td>
+                            </tr>
+                          </TABLE>
+                        </TD>
+                      </TR>
+                    </TABLE>
+                    <hr/>
+                    <TABLE width="702" border="0" cellspacing="0"
+                      cellpadding="0">
+                      <TR>
+                        <TD width="700" >
+                          <TABLE width="600" border="0" align="center" class="space">
+                            <TR>
+                              <TH colspan="2">区域地址总结列表</TH>
+                            </TR>
+                            <TR>
+                              <TH width="100">区域ID</TH><TH>区域地址范围</TH>
+                              <TH>是否通告</TH>
+                            </TR>
+                          </TABLE>
+                        </TD>
+                      </TR>
+                    </TABLE>
+                  </div>
+                </div>
+              </div>
+
+            </TD>
+          </TR>
+        </TABLE>
+      </FORM>
+    </CENTER>
+
+
+
+
+  </body>
+</html>
