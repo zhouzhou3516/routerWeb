@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>OSPF IP配置</title>
+    <LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+    <SCRIPT language="javascript" src="../dynaform/common.js"
+      type="text/javascript"></SCRIPT>
+    <script type="text/javascript">
+      window.onload = function() {
+        tabs.set("tab_menu", "tab_content");
+      }
+</script>
+        </head>
+        <body>
+
+          <CENTER>
+            <FORM action="StatusRpm.htm" enctype="multipart/form-data"
+              method="get">
+              <TABLE width="702" border="0" cellpadding="0" cellspacing="0"
+                class="space">
+                <TR>
+                  <TD width="7" class="title"><IMG src="../images/arc.gif"
+                    width="7" height="24"></TD>
+                  <TD width="695" align="left" valign="middle" class="title">OSPF接口配置</TD>
+                </TR>
+                <TR>
+                  <TD colspan="2">
+                    <div id="tab_menu">
+                      <!--tag标题-->
+                      <ul id="nav">
+                        <li><a href="#" class="selected">LAN口</a></li>
+                        <li><a href="#">WAN口1</a></li>
+                        <li><a href="#">WAN口2</a></li>
+                        <li><a href="#">调试1</a></li>
+                        <li><a href="#">E1</a></li>
+                        <div style="clear: both"></div>
+                      </ul>
+                      <!--二级菜单-->
+                      <div id="tab_content">
+                        <div class="tag" style="display: block">
+
+                          <TABLE width="702" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <TR>
+                              <TD width="700" >
+                                <TABLE width="600" border="0" align="center" class="space">
+                                  <TR>
+                                    <TD width="120">OSPF功能开启</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>OSPF区域</TD>
+                                    <TD><input type="text" value="192.1.1.1"></></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>被动接口</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码认证</TD>
+                                    <TD>
+                                      <input type="radio" value="0">NONE
+                                      <input type="radio" value="1">SIMPLE
+                                      <input type="radio" value="2">MD5
+                                    </TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码</TD>
+                                    <TD><input name="linkMode" type="password"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>优先级</TD>
+                                    <TD><input type="text" value="1"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>链路成本</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>接口HELLO计时器(秒)</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <tr>
+                                    <td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+                                      id="Submit" value="确 定" onClick="return doSubmit();">
+                                    </td>
+                                  </tr>
+                                </TABLE>
+                              </TD>
+                            </TR>
+
+                          </TABLE>
+                        </div>
+                        <div class="tag" style="display: none">
+                          <TABLE width="702" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <TR>
+                              <TD width="700" >
+                                <TABLE width="600" border="0" align="center" class="space">
+                                  <TR>
+                                    <TD width="120">OSPF功能开启</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>OSPF区域</TD>
+                                    <TD><input type="text" value="192.1.1.1"></></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>被动接口</TD>
+                                    <TD><input type="checkbox" value="0" checked></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码认证</TD>
+                                    <TD>
+                                      <input type="radio" value="0" checked>NONE
+                                      <input type="radio" value="1">SIMPLE
+                                      <input type="radio" value="2">MD5
+                                    </TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码</TD>
+                                    <TD><input name="linkMode" type="password"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>优先级</TD>
+                                    <TD><input type="text" value="1"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>链路成本</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>接口HELLO计时器(秒)</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <tr>
+                                    <td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+                                      id="Submit" value="确 定" onClick="return doSubmit();">
+                                    </td>
+                                  </tr>
+                                </TABLE>
+                              </TD>
+                            </TR>
+
+                          </TABLE>
+                        </div>
+                        <div class="tag" style="display: none">
+                          <TABLE width="702" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <TR>
+                              <TD width="700" >
+                                <TABLE width="600" border="0" align="center" class="space">
+                                  <TR>
+                                    <TD width="120">OSPF功能开启</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>OSPF区域</TD>
+                                    <TD><input type="text" value="192.1.1.1"></></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>被动接口</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码认证</TD>
+                                    <TD>
+                                      <input type="radio" value="0">NONE
+                                      <input type="radio" value="1">SIMPLE
+                                      <input type="radio" value="2">MD5
+                                    </TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码</TD>
+                                    <TD><input name="linkMode" type="password"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>优先级</TD>
+                                    <TD><input type="text" value="1"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>链路成本</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>接口HELLO计时器(秒)</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <tr>
+                                    <td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+                                      id="Submit" value="确 定" onClick="return doSubmit();">
+                                    </td>
+                                  </tr>
+                                </TABLE>
+                              </TD>
+                            </TR>
+
+                          </TABLE>
+                        </div>
+                        <div class="tag" style="display: none">
+                          <TABLE width="702" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <TR>
+                              <TD width="700" >
+                                <TABLE width="600" border="0" align="center" class="space">
+                                  <TR>
+                                    <TD width="120">OSPF功能开启</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>OSPF区域</TD>
+                                    <TD><input type="text" value="192.1.1.1"></></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>被动接口</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码认证</TD>
+                                    <TD>
+                                      <input type="radio" value="0">NONE
+                                      <input type="radio" value="1">SIMPLE
+                                      <input type="radio" value="2">MD5
+                                    </TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码</TD>
+                                    <TD><input name="linkMode" type="password"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>优先级</TD>
+                                    <TD><input type="text" value="1"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>链路成本</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>接口HELLO计时器(秒)</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <tr>
+                                    <td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+                                      id="Submit" value="确 定" onClick="return doSubmit();">
+                                    </td>
+                                  </tr>
+                                </TABLE>
+                              </TD>
+                            </TR>
+
+                          </TABLE>
+                        </div>
+                        <div class="tag" style="display: none">
+                          <TABLE width="702" border="0" cellspacing="0"
+                            cellpadding="0">
+                            <TR>
+                              <TD width="700" >
+                                <TABLE width="600" border="0" align="center" class="space">
+                                  <TR>
+                                    <TD width="120">OSPF功能开启</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>OSPF区域</TD>
+                                    <TD><input type="text" value="192.1.1.1"></></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>被动接口</TD>
+                                    <TD><input name="linkMode" type="checkbox" value="0"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码认证</TD>
+                                    <TD>
+                                      <input type="radio" value="0">NONE
+                                      <input type="radio" value="1">SIMPLE
+                                      <input type="radio" value="2">MD5
+                                    </TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>密码</TD>
+                                    <TD><input name="linkMode" type="password"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>优先级</TD>
+                                    <TD><input type="text" value="1"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>链路成本</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <TR>
+                                    <TD>接口HELLO计时器(秒)</TD>
+                                    <TD><input type="text" value="10"></TD>
+                                  </TR>
+                                  <tr>
+                                    <td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+                                      id="Submit" value="确 定" onClick="return doSubmit();">
+                                    </td>
+                                  </tr>
+                                </TABLE>
+                              </TD>
+                            </TR>
+
+                          </TABLE>
+                        </div>
+                      </div>
+                    </div>
+
+                  </TD>
+                </TR>
+              </TABLE>
+            </FORM>
+          </CENTER>
+
+
+
+
+        </body>
+      </html>
