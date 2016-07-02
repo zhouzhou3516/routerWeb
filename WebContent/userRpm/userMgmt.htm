@@ -1,0 +1,133 @@
+
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<style type="text/css">
+body{ font-size:14px;}
+input{ vertical-align:middle; margin:0; padding:0}
+.file-box{ position:relative;width:340px}
+.txt{ height:22px; border:1px solid #cdcdcd; width:180px;}
+.btn{ background-color:#FFF; border:1px solid #CDCDCD;height:24px; width:70px;}
+.file{ position:absolute; top:0; right:80px; height:24px; filter:alpha(opacity:0);opacity: 0;width:260px }
+</style>
+<HTML>
+	<HEAD><TITLE>TL-WR840N</TITLE>
+		<META http-equiv=Pragma content=no-cache>
+		<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+		<LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+		<SCRIPT language="javascript" src="../dynaform/common.js" type="text/javascript"></SCRIPT>
+		<SCRIPT language="javascript" type="text/javascript"><!--
+		//if(window.parent == window){window.location.href="http://192.168.1.1";}
+		function Click(){ return false;}
+		document.oncontextmenu=Click;
+		//--></SCRIPT>
+		<META http-equiv=Content-Type content="text/html; charset=utf-8">
+		<script language="JavaScript"><!--
+		function clickSub()
+		{
+			alert("Server Unavaliable!");
+			return false;
+		}
+		function doSubmit()
+		{
+		if(document.forms[0].filename.value == "")
+		{
+			alert("请选择要升级的文件！");
+			return false;
+		}
+		var tmp = document.forms[0].filename.value
+		if(tmp.substr(tmp.length - 4) != ".bin")
+		{
+			alert("错误的文件类型，请使用bin类型的升级文件。");
+			return false;
+		}
+		var arr = tmp.substr(tmp.lastIndexOf('\\') + 1);
+		if(arr.length >= 64)
+		{
+			alert("升级文件文件名过长(需小于64字节)，请修改文件名后再重新尝试。");
+			return false;
+		}
+		if(!confirm("确认要进行系统升级吗?"))
+		{
+			return false;
+		}
+			return true;
+		}
+//-->
+		</script>
+		</head>
+		<body>
+			<center><form action="/incoming/Firmware.htm" enctype="multipart/form-data" method="post" onSubmit="return doSubmit();">
+				<table width="702" border="0" cellspacing="0" cellpadding="0">
+					<tr><td width="7" class="title"><img src="../images/arc.gif" width="7" height="24"></td>
+						<td width="795" align="left" valign="middle" class="title">系统升级</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="border">
+							<table width="702" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td >
+										<table width="700" border="0" cellpadding="2" cellspacing="0" class="space" style="margin-left:20px;">
+											<tr>
+											    <td>用户名</td>
+											    <td>权限</td>
+											    <td>密码</td>
+											    <td>确认密码</td> 
+											</tr>
+											<tr>
+											    <td>
+											    	<input name="username" type="text"  class="text" id="username" value="">
+											    </td>
+											    <td>
+													<select name="interface" class="listS" style="width:80;height:20" id="rooterport">
+														<option value="1">管理员</option>
+														<option value="2">操作员</option>
+													</select>
+												</td>
+											    <td>
+											    	<input name="password" type="text"  class="text" id="password" value="" >
+											    </td>
+											    <td >
+											    	<input name="passwordconf" type="text"  class="text" id="passwordconf" value="" >
+											    </td>
+											    <td>
+											    	<input type="button" onClick="adduser()" id="Submit1" value="添加用户">
+											    </td>
+											    <td>
+											    	<input type="button" onClick="changepwd()"  id="Submit2" value="修改密码">
+											    </td>
+											</tr>
+										</table>
+										
+									</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<hr>
+										<table width="400" border="0"  cellpadding="0" cellspacing="0" class="space">
+											<tr >
+											    <td>用户名</td>
+											    <td>权限</td>
+											    <td>密码</td>
+											    <td>操作</td>
+											</tr>
+											<tr>
+											    <td>admin</td>
+											    <td>管理员</td>
+											    <td>******</td>
+											    <td>删除</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+							</table>
+						</td>
+					</tr>
+				</table>
+				</form>
+			</center>
+		</BODY>
+		<head>
+			<meta http-equiv="pragma" content="no-cache">
+		</head>
+</HTML>
+

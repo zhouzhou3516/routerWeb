@@ -36,9 +36,14 @@
 							<!--二级菜单-->
 							<div id="tab_content">
 								<div class="tag" style="display: block">
-
+									
 									<TABLE width="702" border="0" cellspacing="0"
 										cellpadding="0">
+										<tr>
+											<td colspan="10">
+												<h4>OSPF 全局配置</h4>
+											</td>
+										</tr>
 										<TR>
 											<TD width="700" >
 												<TABLE width="600" border="0" align="center" class="space">
@@ -73,7 +78,84 @@
 										
 									</TABLE>
 								</div>
-								<div class="tag" style="display: none">这是TAB切换效果区域2</div>
+								<div class="tag" style="display: none">
+
+									<TABLE width="702" border="0" cellspacing="0"
+										cellpadding="0">
+										<tr>
+											<td colspan="10">
+												<h4>OSPF 重分发控制配置界面</h4>
+											</td>
+										</tr>
+										<TR>
+											<TD width="700" >
+												<TABLE width="600" border="0" align="center" class="space">
+													<TR>
+														<TD width="100">网络地址</TD>
+														<TD><input name="linkMode" type="text" value="0"></TD>
+													</TR>
+													<TR>
+														<TD>子网掩码</TD>
+														<TD><input type="text" value="192.1.1.1"></></TD>
+													</TR>
+													<TR>
+														<TD>尺度类型</TD>
+														<TD><input name="type" type="radio" value="2">类型一<input name="type" type="radio" value="2">类型二</TD>
+													</TR>
+													<TR>
+														<TD>尺度值</TD>
+														<TD><input name="typevalue" type="text" value="3"></TD>
+													</TR>
+													<tr>
+														<td height="30" align="center" colspan="10">&nbsp; <input name="Save" type="submit" class="button"
+															id="Submit" value="确 定" onClick="return doSubmit();">
+														</td>
+													</tr>
+													
+													
+												</TABLE>
+											</TD>
+										</TR>
+										<tr>
+                                <td ><hr></td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <h4>已配置的重分发路由控制列表</h4>
+                                </td>
+                            </tr>
+                            <tr>
+								<table width="80%" align="center">
+									<thead>
+										<tr>
+											<td>网络地址</td>
+											<td>子网掩码</td>
+											<td>尺度类型</td>
+											<td>尺度值</td>
+											<td>删除</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>192.168.0.0</td>
+											<td>255.255.255.0</td>
+											<td>192.168.1.3</td>
+											<td>类型一</td>
+											<td><input value="删除"  type="button"/></td>
+										</tr>
+										<tr>
+											<td>192.168.0.0</td>
+											<td>255.255.255.0</td>
+											<td>192.168.1.3</td>
+											<td>类型二</td>
+											<td><input value="删除"  type="button"/></td>
+										</tr>
+									</tbody>
+								</table>
+
+							</tr>
+									</TABLE>
+								</div>
 							</div>
 						</div>
 					

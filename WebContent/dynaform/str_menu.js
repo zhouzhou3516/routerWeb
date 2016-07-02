@@ -14,6 +14,8 @@ str_menu.sysRouteCfg		=	"系统路由配置";
 str_menu.staticRouteCfg		=	"静态路由";
 str_menu.sysRouteTable		=  	"显示路由表";
 
+str_menu.qosCfg				=	"QoS配置"
+
 str_menu.ospfCfg			=	"OSPF配置";
 str_menu.ospfGlobalcfg			=	"OSPF全局配置";
 str_menu.ospfAreacfg			=	"OSPF AREA配置";
@@ -22,6 +24,13 @@ str_menu.ospfVipcfg			=	"OSPF VIP配置";
 str_menu.ospfShowlsa			=	"OSPF 显示LSA";
 str_menu.ospfNaburStatus			=	"OSP邻居状态";
 str_menu.ospfInterfaceStatus			=	"OSP接口状态";
+
+str_menu.devMgmt			=	"设备管理";
+str_menu.sysUpg			=	"系统升级";
+str_menu.sysRestart			=	"系统重启";
+str_menu.sysRestSett			=	"恢复设置";
+str_menu.userMgmt			=	"用户管理";
+str_menu.paraSave			=	"参数保存";
 
 
 

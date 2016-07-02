@@ -1,0 +1,126 @@
+
+
+<
+<HTML>
+	<HEAD><TITLE>TL-WR840N</TITLE>
+		<META http-equiv=Pragma content=no-cache>
+		<META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
+		<META http-equiv=Content-Type content="text/html; charset=utf-8">
+
+		<LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
+		<style type="text/css">
+		body{ font-size:14px;}
+		input{ vertical-align:middle; margin:0; padding:0}
+		.file-box{ position:relative;width:340px}
+		.txt{ height:22px; border:1px solid #cdcdcd; width:180px;}
+		.btn{ background-color:#FFF; border:1px solid #CDCDCD;height:24px; width:70px;}
+		.file{ position:absolute; top:0; right:80px; height:24px; filter:alpha(opacity:0);opacity: 0;width:260px }
+		</style>
+		<SCRIPT language="javascript" src="../dynaform/common.js" type="text/javascript"></SCRIPT>
+		<SCRIPT language="javascript" type="text/javascript"><!--
+		//if(window.parent == window){window.location.href="http://192.168.1.1";}
+		function Click(){ return false;}
+		document.oncontextmenu=Click;
+		//--></SCRIPT>
+		<META http-equiv=Content-Type content="text/html; charset=utf-8">
+		<script language="JavaScript"><!--
+		function clickSub()
+		{
+			alert("Server Unavaliable!");
+			return false;
+		}
+		function doSubmit()
+		{
+		if(document.forms[0].filename.value == "")
+		{
+			alert("请选择要升级的文件！");
+			return false;
+		}
+		var tmp = document.forms[0].filename.value
+		if(tmp.substr(tmp.length - 4) != ".bin")
+		{
+			alert("错误的文件类型，请使用bin类型的升级文件。");
+			return false;
+		}
+		var arr = tmp.substr(tmp.lastIndexOf('\\') + 1);
+		if(arr.length >= 64)
+		{
+			alert("升级文件文件名过长(需小于64字节)，请修改文件名后再重新尝试。");
+			return false;
+		}
+		if(!confirm("确认要进行系统升级吗?"))
+		{
+			return false;
+		}
+			return true;
+		}
+//-->
+		</script>
+		</head>
+		<body>
+			<center><form action="" enctype="multipart/form-data" method="post" onSubmit="return doSubmit();">
+				<table width="502" border="0" cellspacing="0" cellpadding="0">
+					<tr><td width="7" class="title"><img src="../images/arc.gif" width="7" height="24"></td>
+						<td width="495" align="left" valign="middle" class="title">系统升级</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="border">
+							<table width="502" border="0" cellspacing="0" cellpadding="0" >
+								<tr>
+									<td width="500">
+										<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="space">
+											<tr>
+												<td width="295"><input type="button" onClick="clickSub()" style="height=20px;width=600px;" id="Submit1" value="在线升级"></td>
+											</tr>
+										</table>
+										<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="space">
+											<tr>
+												<td width="105">升级程序：</td>
+												<td>
+												<div class="file-box">
+													<form action="" method="post" enctype="multipart/form-data">
+													<input type='text' name='textfield' id='textfield' class='txt' /> 
+													<input type='button' class='btn' value='浏览...' />
+													<input type="file" name="fileField" class="file" id="filename" size="28" onchange="document.getElementById('textfield').value=this.value" />
+													<input type="submit" name="submit" class="btn" value="立即升级" />
+													</form>
+												</div>
+												</td>
+											</tr>
+										</table>
+										<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="space">
+											<tr>
+												<td width="105">升级状态：</td>
+												<td width="295"><input name="Upgrade" type="text" class="text" id="hostname" value="" size="20" maxlength="20"></td>
+											</tr>
+										</table>
+									</td>
+									
+								</tr>
+								<tr>
+									<td ><hr></td>
+								</tr>
+								<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="space" >
+									<tr><td width="105">说明：</td></tr>
+									<tr>
+										<td width="105">1. 软件更新始终将升级到主用软件镜像位置。</td>
+										<!--<td width="295" ><DIV ID="fversion"></DIV></td>-->
+										<tr><td width="295">2. 软件在升级时选择与当前设备型号一致的升级程序，升级动作可能需要一段时间，此时请不要关闭电脑；</td></tr>
+										<!--<td width="295" ><DIV ID="fversion"></DIV></td>-->
+										<tr><td width="295">在软件升级时请勿关闭此界面或中断连接。</td></tr>
+										<!--<td width="295" ><DIV ID="fversion"></DIV></td>-->
+									</tr>
+									<tr><td height=8></td></tr>
+								</table>
+							</table>
+						</td>
+					</tr>
+				</table>
+				</form>
+			</center>
+		</BODY>
+		<head>
+			<meta http-equiv="pragma" content="no-cache">
+		</head>
+</HTML>
+

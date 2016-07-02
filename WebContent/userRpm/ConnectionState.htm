@@ -1,83 +1,88 @@
 
-<SCRIPT language="javascript" type="text/javascript">
-	var LinkPara = new Array(1);
-</SCRIPT>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
 <HTML>
 <HEAD>
+<TITLE>LTY15</TITLE>
 <META http-equiv=Pragma content=no-cache>
 <META http-equiv=Expires content="wed, 26 Feb 1997 08:21:57 GMT">
 <LINK href="../dynaform/css_main.css" rel=stylesheet type="text/css">
-<SCRIPT language="javascript" src="../dynaform/common.js" type="text/javascript"></SCRIPT>
-<SCRIPT language="javascript" type="text/javascript">
-<!--
-	if (window.parent == window) {
-		//window.location.href = "http://192.168.1.1";
-	}
-	function Click() {
-		return false;
-	}
-	//document.oncontextmenu = Click;
-//-->
-</SCRIPT>
-<META http-equiv=Content-Type content="text/html; charset=utf-8">
-<script language="JavaScript">
-<!--
-	function doSubmit() {
-		
-		return true;
-	}
-//-->
-</script>
+<SCRIPT language="javascript" src="../dynaform/common.js"
+    type="text/javascript"></SCRIPT>
+
 </head>
-<body>
-	<center>
-		<form action="#" enctype="multipart/form-data" method="get">
-			<table width="502" border="0" cellspacing="0" cellpadding="0">
+<body >
+    <center>
+        <form action="HostNameCfg.htm" enctype="multipart/form-data"
+            method="get" onSubmit="return doSubmit();">
+            <table width="702"  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="7" class="title"><img src="../images/arc.gif"
+                        width="7" height="24"></td>
+                    <td width="695" align="left" valign="middle" class="title">连接显示</td>
+                </tr>
 				<tr>
-					<td width="7" class="title"><img src="../images/arc.gif" width="7" height="24"></td>
-					<td width="495" align="left" valign="middle" class="title">连接状态</td>
-				</tr>
-				<tr>
-					<td colspan="2"><table width="502" border="0" cellspacing="0" cellpadding="0">
+					<td colspan="2">
+						<table width="702" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td class="vline" rowspan="15"><br></td>
-								<td width="500">
-									<table width="400" border="0" align="center" class="space">
+								<td class="vline" rowspan="15">
+									<br>
+								</td>
+								
+								<td width="700">
+									<table>
 										<tr>
-											<td width="107">功能选择：</td>
-											<td width="283"><input name="linkMode" type="radio" value="0">不启用 <input
-												name="linkMode" type="radio" value="1" Checked>启用</td>
+											<td> <h4>显示连接状态</h4>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<textarea style="overflow: scroll; overflow-x: scroll; height: 400px; width: 690px;">
+channel 0(ppp)
+		   LCP Stats
+		   				LCP phase                     NETWORK
+		   				LCP state                     OPENED
+		   				passive                       ON
+		   				silent                        OFF
+		   				restart                       OFF
+		   				mru                           1500
+		   				mtu                           1500
+		   				async map                     0x0
+		   				local magic number            0x326e689c
+		   				protocol field compression    OFF
+		   				addr/ctrl field compression   OFF
+		   				lcp echo timer                ON
+		   				lcp echos pending             0
+		   				lcp echo number               125
+		   				lcp echo interval             10
+		   				lcp echo fails                10
+		   IPCP Stats
+		   				IPCP state                    OPENED
+		   				local IP address              192.168.30.1
+		   				remote IP address             192.168.30.2
+                         </textarea>
+											</td>
 										</tr>
 										
 									</table>
+									
 								</td>
-								<td class="vline" rowspan="15"><br></td>
-							</tr>
-							<tr>
-								<td class="hline"><img src="../images/empty.gif" width="1" height="1"></td>
-							</tr>
-							<tr>
-								<td height="30" class="tail" align="center">&nbsp; <input name="Save" type="submit" class="button"
-									id="Submit" value="保 存" onClick="return doSubmit();">
+								<td class="vline" rowspan="15">
+									<br>
 								</td>
 							</tr>
 							<tr>
-								<td class="hline"><img src="../images/empty.gif" width="1" height="1"></td>
+								<td class="hline"></td>
 							</tr>
-						</table></td>
+						</table>
+
+					</td>
 				</tr>
 			</table>
-		</form>
-	</center>
+        </form>
+    </center>
 </body>
 <head>
 <meta http-equiv="pragma" content="no-cache">
 </head>
 </html>
-<script language="JavaScript">
-	if (LinkPara[0] == 0)
-		document.forms[0].linkMode[0].checked = true;
-	else
-		document.forms[0].linkMode[1].checked = true;
-</script>
+
